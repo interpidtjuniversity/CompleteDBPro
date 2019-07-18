@@ -1,0 +1,30 @@
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\Newtonsoft.Json.dll
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\SqlSugar.dll
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\Newtonsoft.Json.xml
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csprojResolveAssemblyReference.cache
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form1.resources
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.GenerateResource.Cache
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb
+D:\sky\projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Actions.resources
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\Newtonsoft.Json.dll
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\SqlSugar.dll
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\Newtonsoft.Json.xml
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csprojAssemblyReference.cache
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Actions.resources
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form1.resources
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.GenerateResource.cache
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.CoreCompileInputs.cache
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.CopyComplete
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\Oracle.ManagedDataAccess.dll
+F:\vs2017python\asp DBProject\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe.config

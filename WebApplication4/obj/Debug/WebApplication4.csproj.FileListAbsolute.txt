@@ -1,0 +1,167 @@
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\WebApplication4.dll.config
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\WebApplication4.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\WebApplication4.pdb
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\csc.exe
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\csc.exe.config
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\csc.rsp
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\csi.exe
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\csi.exe.config
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\csi.rsp
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.Managed.Core.targets
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.AppContext.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Collections.Immutable.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Console.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.IO.Compression.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.IO.FileSystem.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.IO.Pipes.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Reflection.Metadata.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Security.AccessControl.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Security.Claims.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Security.Principal.Windows.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.ValueTuple.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Xml.XmlDocument.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Xml.XPath.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\vbc.exe
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\vbc.exe.config
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\vbc.rsp
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\VBCSCompiler.exe
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\roslyn\VBCSCompiler.exe.config
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\Microsoft.Web.Infrastructure.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\Oracle.ManagedDataAccess.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Helpers.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Mvc.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Razor.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Webpages.Deployment.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Webpages.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Webpages.Razor.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Razor.xml
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Webpages.xml
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Webpages.Deployment.xml
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Webpages.Razor.xml
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Helpers.xml
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\System.Web.Mvc.xml
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Webpages.resources.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Webpages.Deployment.resources.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Webpages.Razor.resources.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csprojAssemblyReference.cache
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.CoreCompileInputs.cache
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.CopyComplete
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\obj\Debug\WebApplication4.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\obj\Debug\WebApplication4.pdb
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\Dapper.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\Newtonsoft.Json.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\Microsoft.Practices.Unity.dll
+F:\vs2017python\asp数据库项目\WebApplication4\WebApplication4\bin\Microsoft.Practices.Unity.Configuration.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\WebApplication4.dll.config
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\WebApplication4.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\WebApplication4.pdb
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\csc.exe
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\csc.exe.config
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\csc.rsp
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\csi.exe
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\csi.exe.config
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\csi.rsp
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.Managed.Core.targets
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.AppContext.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Collections.Immutable.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Console.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.IO.Compression.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.IO.FileSystem.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.IO.Pipes.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Reflection.Metadata.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Security.AccessControl.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Security.Claims.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Security.Principal.Windows.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.ValueTuple.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Xml.XmlDocument.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Xml.XPath.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\vbc.exe
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\vbc.exe.config
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\vbc.rsp
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\VBCSCompiler.exe
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\roslyn\VBCSCompiler.exe.config
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Dapper.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Microsoft.Practices.Unity.Configuration.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Microsoft.Practices.Unity.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Microsoft.Web.Infrastructure.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Newtonsoft.Json.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Oracle.ManagedDataAccess.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Helpers.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Mvc.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Razor.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Webpages.Deployment.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Webpages.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Webpages.Razor.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Razor.xml
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Webpages.xml
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Webpages.Deployment.xml
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Webpages.Razor.xml
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Helpers.xml
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Mvc.xml
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Webpages.resources.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Webpages.Deployment.resources.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Webpages.Razor.resources.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.CoreCompileInputs.cache
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.CopyComplete
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\obj\Debug\WebApplication4.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\obj\Debug\WebApplication4.pdb
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\SqlSugar.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Newtonsoft.Json.xml
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Antlr3.Runtime.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Optimization.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\WebGrease.dll
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\Antlr3.Runtime.pdb
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\bin\System.Web.Optimization.xml
+F:\vs2017python\asp DBProject\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csprojAssemblyReference.cache

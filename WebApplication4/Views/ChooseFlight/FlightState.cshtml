@@ -1,0 +1,301 @@
+﻿@using WebApplication4.Models;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>实时航班信息</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica;
+            -webkit-font-smoothing: antialiased;
+            /*background: rgba( 71, 147, 227, 1);*/
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 35px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            padding: 30px 0;
+        }
+
+        /* Table Styles */
+
+        .table-wrapper {
+            margin: 10px 70px 70px;
+            box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+        }
+
+        .fl-table {
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: normal;
+            border: none;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            white-space: nowrap;
+            background-color: white;
+        }
+
+            .fl-table td, .fl-table th {
+                text-align: center;
+                padding: 8px;
+            }
+
+            .fl-table td {
+                border-right: 1px solid #f8f8f8;
+                font-size: 15px;
+            }
+
+            .fl-table thead th {
+                color: #ffffff;
+                background: #4FC3A1;
+            }
+
+
+                .fl-table thead th:nth-child(odd) {
+                    color: #ffffff;
+                    background: #324960;
+                }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+
+        /* Responsive */
+
+        media (max-width: 767px) {
+            .fl-table
+
+        {
+            display: block;
+            width: 100%;
+        }
+
+        .table-wrapper:before {
+            content: "Scroll horizontally >";
+            display: block;
+            text-align: right;
+            font-size: 11px;
+            color: white;
+            padding: 0 0 10px;
+        }
+
+        .fl-table thead, .fl-table tbody, .fl-table thead th {
+            display: block;
+        }
+
+            .fl-table thead th:last-child {
+                border-bottom: none;
+            }
+
+        .fl-table thead {
+            float: left;
+        }
+
+        .fl-table tbody {
+            width: auto;
+            position: relative;
+            overflow-x: auto;
+        }
+
+        .fl-table td, .fl-table th {
+            padding: 20px .625em .625em .625em;
+            height: 60px;
+            vertical-align: middle;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            overflow-y: auto;
+            width: 120px;
+            font-size: 13px;
+            text-overflow: ellipsis;
+        }
+
+        .fl-table thead th {
+            text-align: left;
+            border-bottom: 1px solid #f7f7f9;
+        }
+
+        .fl-table tbody tr {
+            display: table-cell;
+        }
+
+            .fl-table tbody tr:nth-child(odd) {
+                background: none;
+            }
+
+        .fl-table tr:nth-child(even) {
+            background: transparent;
+        }
+
+        .fl-table tr td:nth-child(odd) {
+            background: #F8F8F8;
+            border-right: 1px solid #E6E4E4;
+        }
+
+        .fl-table tr td:nth-child(even) {
+            border-right: 1px solid #E6E4E4;
+        }
+
+        .fl-table tbody td {
+            display: block;
+            text-align: center;
+        }
+    </style>
+
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript">
+
+        function Update() {
+            window.location.href = "UpdateFlightState";
+        };
+
+        var pickresult = -1;
+        $(document).on('click', '#buttonu', function () {
+
+            pickresult = $(this).parents("tr").index();
+
+
+            var flightid = $(this).parents("tr").find("td").eq(0).text();
+            var t_a_t = $(this).parents("tr").find("td").eq(1).text();
+            var l_a_t = $(this).parents("tr").find("td").eq(2).text();
+            var e_t_t = $(this).parents("tr").find("td").eq(3).text();
+            var e_l_t = $(this).parents("tr").find("td").eq(4).text();
+            var state = $(this).parents("tr").find("td").eq(5).text();
+
+            document.form.a.value = flightid;
+            document.form.b.value = t_a_t;
+            document.form.c.value = l_a_t;
+            document.form.d.value = e_t_t;
+            document.form.e.value = e_l_t;
+            document.form.f.value = state;
+
+            document.form.submit();
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="section">
+                <div><a href="index.html"><img src="~/Picture/logo.jpg" alt="Logo" /></a></div>
+                <p style="float:right;"><a href="/Login/Login" style="color:#0F0;font-size:24px;">注销</a></p>
+                <span>欢迎使用机场管理系统 <br /><br />你好，303</span>
+
+            </div>
+            <ul>
+                <li><a href="/Login/ReturnToPersonMain">主页</a></li>
+                <li><a href="/ChooseFlight/ChooseFlight">登机牌业务</a></li>
+                <li class="current"><a href="/ChooseFlight/ShowFlightsState">机场状态</a></li>
+                <li><a href="/Luggage/ShowLuggages">行李托运</a></li>
+                <li><a href="/BoardPass/ShowFlightsState">登机管理</a></li>
+
+
+            </ul>
+        </div>
+
+        <h2>实时航班信息</h2>
+        <div class="table-wrapper" style="overflow-y: auto">
+            <table class="fl-table" id="states">
+
+                <tr>
+                    <th>航班号</th>
+                    <th>出发</th>
+                    <th>到达</th>
+                    <th>预计起飞时间</th>
+                    <th>预计达到时间</th>
+                    <th>航班状态</th>
+                    <th>操作</th>
+                </tr>
+
+
+                @{
+                    foreach (FlightStateReturn fsr in Model)
+                    {
+                        string a = fsr.tf.t_airport + "-" + fsr.tf.t_terminal;
+                        string b = fsr.tf.l_airport + "-" + fsr.tf.l_termnal;
+                        <tr>
+                            <td>@Html.DisplayFor(m => fsr.tf.f_id)</td>
+                            <td>@Html.DisplayFor(m => a)</td>
+                            @*<td>@Html.DisplayFor(m => flight_time.F_tt)</td>*@
+                            <td>@Html.DisplayFor(m => b)</td>
+                            <td>@Html.DisplayFor(m => fsr.tf.ex_takeoff_time)</td>
+                            <td>@Html.DisplayFor(m => fsr.tf.ex_land_time)</td>
+                            <td>@Html.DisplayFor(m => fsr.State)</td>
+                            @*<td>@Html.DisplayFor(m => flight_time.F_rtt)</td>
+                            <td>@Html.DisplayFor(m => flight_time.F_rlt)</td>
+                            <td>@Html.DisplayFor(m => flight_time.F_la)</td>
+                            <td>@Html.DisplayFor(m => flight_time.F_lt)</td>*@
+                            <td>
+                                <input type="button" id="buttonu" value="修改">
+                            </td>
+                        </tr>
+                    }
+                }
+            </table>
+
+            <form method="post" action="/ChooseFlight/UpdateFlightState" name="form" style="margin:0 auto;width:500px">
+                <input type="hidden" name="a" id="aid" value="">
+                <input type="hidden" name="b" id="bid" value="">
+                <input type="hidden" name="c" id="cid" value="">
+                <input type="hidden" name="d" id="did" value="">
+                <input type="hidden" name="e" id="eid" value="">
+                <input type="hidden" name="f" id="fid" value="">
+            </form>
+
+        </div>
+        <div id="footer">
+            <div>
+                <div id="connect">
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-facebook.gif" alt="Facebook" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-twitter.gif" alt="Twitter" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-youtube.gif" alt="Youtube" /></a>
+                </div>
+                <div class="section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="trainingcourses.html">Training Courses</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li class="last"><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                    <p>&copy; Copyright 0000. Company Name. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var tables = document.getElementsByTagName("table");
+            var odd, rows;
+            for (var i = 0; i < tables.length; i++) {
+                odd = false;
+                rows = tables[i].getElementsByTagName("tr");
+                for (var j = 0; j < rows.length; j++) {
+                    if (odd == false) {
+                        rows[j].style.backgroundColor = "#c4c4c4";
+                        odd = true;
+                    } else {
+                        odd = false;
+                    }
+                }
+            };
+
+        </script>
+    </div>
+</body>
+</html >
+

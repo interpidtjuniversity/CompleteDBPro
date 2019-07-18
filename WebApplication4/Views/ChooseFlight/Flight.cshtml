@@ -1,0 +1,193 @@
+﻿@using WebApplication4.Models;
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>登机牌办理</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript">
+        var pickresult = -1;         //单选结果
+        var signal = 1;              //信号量
+        function pick(id) {
+            var pickseat = document.getElementById(id);            //获取点击对象
+            if (pickseat.getAttribute("alt") == 0 && signal == 1) {
+                pickseat.setAttribute("src", "/Picture/b.png");
+                pickseat.setAttribute("alt", "1");
+                signal--;
+                pickresult = id;
+                document.form.seatnumber.value = pickresult;
+            }
+            else if (pickseat.getAttribute("alt") == 1 && signal == 0) {
+                pickseat.setAttribute("src", "/Picture/a.png");
+                pickseat.setAttribute("alt", "0");
+                signal++;
+                pickresult = -1;
+                document.form.seatnumber.value = "";
+            }
+        }
+
+        function transformValue() {
+            if (pickresult == -1 && form.Customer_ID.value != "") {
+                alert("没有选择任何座位");
+            }
+            else if (pickresult > 0 && form.Customer_ID.value == "") {
+                alert("没有输入顾客ID");
+            }
+            else if (pickresult == -1 && form.Customer_ID.value == "") {
+                alert("没有选择任何座位 没有输入顾客ID");
+            }
+            else {
+                alert("选座成功");
+                document.form.result.value = pickresult;
+                document.form.submit();
+                document.formcur_flight.submit();
+            }
+
+        }
+
+        $(document).ready(function () {
+            $("#Customer_IDid").click(function () {
+                $.ajax({
+                    url: "/ChooseFlight/ShowCustomerID",
+                    data: { fid: $('#flightid').val() },
+                    async: true,
+                    type: 'post',
+                    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                    success: function (result) {
+                        $('#Customer_IDid').empty().append(result);
+                    }
+                });
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="section">
+                <div><a href="index.html"><img src="~/Picture/logo.jpg" alt="Logo" /></a></div>
+                <p style="float:right;"><a href="/Login/Login" style="color:#0F0;font-size:24px;">注销</a></p>
+                <span>欢迎使用机场管理系统 <br /><br />你好，303</span>
+            </div>
+            <ul>
+                <li><a href="/Login/ReturnToPersonMain">主页</a></li>
+                <li class="current"><a href="/ChooseFlight/ChooseFlight">登机牌业务</a></li>
+                <li><a href="/ChooseFlight/ShowFlightsState">机场状态</a></li>
+                <li><a href="/Luggage/ShowLuggages">行李托运</a></li>
+                <li><a href="/BoardPass/ShowFlightsState">登机管理</a></li>
+            </ul>
+        </div>
+
+        <div id="container">
+            <div>
+                <div class="first">
+                    <div class="sidebar1">
+                        <form method="post" action="/ChooseFlight/ReceiveMsg" name="form" style="margin:0 auto;width:500px">
+                            <input type="hidden" name="result" id="resultid" value="">
+                            <input type="hidden" name="current_flight" id="current_flightid" value="@Model.SingleData[0]">
+                            顾 客 I  D:
+                            <select id="Customer_IDid" name="Customer_ID" style="width:145px"></select>
+                            <br>
+                            航班编号:
+                            @{
+                                string flightid = Model.SingleData[0];
+                                <input type="text" value="@(flightid)" name="Flight_ID" id="flightid" />
+                            }
+                            <br>
+                            出发地点:
+                            @{
+                                string airport_terminal = Model.SingleData[1] + Model.SingleData[2];
+                                <input type="text" value="@(airport_terminal)" name="airport_terminal" />
+                            }
+                            <br>
+                            出发时间:
+                            @{ string ex_takeoff_time = Model.SingleData[3];
+                                <input type="text" value="@(ex_takeoff_time) " name="ex_takeoff_time" />
+                            }
+                            <br>
+                            座位编号:
+                            <input type="text" name="seatnumber" />
+                            <br>
+                            票&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp价:
+                            @{ string ticvalue = Model.SingleData[4];
+                                <input type="text" value="@(ticvalue)" />
+                            }
+                            <br>
+                            
+                            <br><br>
+                        </form>
+                        <form class="butt" style="display:inline-block;width:80px;height:50px">
+                            <input type="button" onclick="transformValue()" value="确认选座"  style="width:80px;height:50px;" />
+                        </form>
+
+                        <form class="butt" style="display:inline-block;width:80px;height:50px">
+                            <input type="button" value="返回" name="cancel" align="middle" onClick="javascript:window.location.href='/ChooseFlight/ChooseFlight'" style="width:80px;height:50px;" />
+                        </form>
+
+                    </div>
+
+                    <div id="pic"><img src="~/Picture/客机.gif"/></div>
+
+                </div>
+            </div>
+        </div>
+
+        @{
+            int length = Model.SeatArray.Length;
+            int row = 6;
+            int col = length / row;
+            int wh = col * 45;
+        }
+        <div style="margin:70px auto 70px auto;width:@(wh)px;height:300px;">
+            <div></div>
+            @{
+                for (int i = 0; i < row; i++)
+                {
+                    for (int j = 0; j < col; j++)
+                    {
+                        string seatid = (i * col + j + 1).ToString();
+                        if (Model.SeatArray[i * col + j] < 0)
+                        {
+                            <img id="@(seatid)" alt="0" src="~/Picture/a.png" style="width:40px;height:40px;float:left;margin-left:5px;margin-top:5px" onclick="pick(this.id)" />
+                        }
+                        else
+                        {
+                            <img id="@(seatid)" alt="2" src="~/Picture/c.png" style="width:40px;height:40px;float:left;margin-left:5px;margin-top:5px;color:lawngreen" />
+                        }
+                    }
+                    <br />
+                }
+            }
+        </div>
+        <rb />
+        <div id="footer" style="display:inline-block">
+            <div>
+                <div id="connect">
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-facebook.gif" alt="Facebook" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-twitter.gif" alt="Twitter" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-youtube.gif" alt="Youtube" /></a>
+                </div>
+                <div class="section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="trainingcourses.html">Training Courses</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li class="last"><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                    <p>&copy; Copyright 0000. Company Name. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

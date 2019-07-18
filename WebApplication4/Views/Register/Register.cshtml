@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>欢迎注册</title>
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#username").change(function () {
+                var username = $.trim($("#username").val());
+                $.ajax({
+                    url: "/Register/Check",
+                    data: { username: username },
+                    async: true,
+                    type: 'post',
+                    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                    success: function (result) {
+                        if (result == "No") {
+                            $("#spanName").css("color", "red");
+                            $("#spanName").html("您输入的用户名已存在");
+                        }
+                        else if(result=="Yes"){
+                            $("#spanName").css("color", "green");
+                            $("#spanName").html("可以使用");
+                        }
+                    }
+                });
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+    <form method="post" action="/Register/SignUpHandle">
+        用户名：<input type="text" name="RegisterId" id="username" />
+        <span id="spanName" style="color:Red"></span>
+        <br /><br />
+        密码：<input type="password" name="Registerpwd" />
+        <br /><br />
+        确认密码:<input type="password" name="Registerpwdcheck" />
+        <br /><br />
+        <input type="submit" value="注册" /><br />
+        <span style="color:red">@ViewData["info"]</span>
+    </form>
+</body>
+</html>

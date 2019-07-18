@@ -1,0 +1,368 @@
+/* Template by freewebsitetemplates.com */
+
+body {
+	background-color: #62919e;
+	color: #585858;
+	font-family: Arial;
+	font-size: 14px;
+	margin: 0;
+	min-width: 960px;
+}
+#header {
+	background: url(/Picture/header1.jpg);
+	background-repeat:repeat-x;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+
+}
+a {
+	outline: none;
+	text-decoration:none;
+}
+
+img {
+	border: none;
+}
+
+#header div#section:after,
+#header ul:after,
+#content div:after,
+#content div ul.services:after,
+#footer div:after,
+#footer div div.section ul:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+
+
+#header div#section {
+	height: 200px;
+	/* margin: 0 auto; */
+	width: 960px;
+
+}
+#logo{
+	position: absolute;
+	top:-10px;
+	left: 20px;
+}
+
+#header div#section div {
+	float: left;
+    margin-top: 48px;
+}
+
+#header div#section div a {
+	display: block;
+}
+
+#header div#section p {
+
+	color: #ACBCC9;
+    float: left;
+    margin: 0;
+    padding-left: 40px;
+    padding-top: 100px;
+    text-align: right;
+    width: 300px;
+	font-size:18px;
+
+}
+#user{
+	float: right;
+	position: absolute;
+	top:60px;
+	right: 30px;
+	color: #ACBCC9;
+		font-size:18px;
+}
+#header ul {
+	position: absolute;
+	top:145px;
+	left: 190px;
+	list-style: none;
+	margin: 2px auto 0;
+  padding: 0;
+	width: 935px;
+}
+
+#header ul li {
+	float: left;
+    padding-right: 5px;
+}
+
+#header ul li a {
+	color: #28475C;
+    display: block;
+	font-size: 14px;
+    height: 39px;
+    line-height: 37px;
+    padding: 0 23px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #d7dacf;
+    text-transform: capitalize;
+}
+
+#header ul li.current, #header ul li:hover {
+	height: 38px;
+}
+
+#header ul li.current a {
+	background-color: #e5e8e8;
+	font-weight: bold;
+	font-size: 15px;
+	text-shadow: 1px 1px 0 #f7ffdf;
+}
+
+#header ul li a:hover {
+		background-color: #eee;
+}
+
+#header div#tagline {
+
+	margin-top: 10px;
+}
+
+#header div#tagline div {
+	color: #295071;
+	height: 275px;
+	padding-left: 20px;
+	margin: 0 auto;
+	width: 940px;
+}
+
+#header div#tagline div h4 {
+	font-family: Georgia, "Times New Roman",Times, serif;
+	font-size: 50px;
+    font-weight: bold;
+    line-height: 70px;
+	margin: 0;
+	padding-top: 100px;
+    text-shadow: 0 1px 0 #FFFFFF;
+	width: 450px;
+
+}
+
+#header div#tagline div p {
+	font-size: 24px;
+    line-height: 35px;
+	margin: 0;
+    padding-top: 20px;
+    text-shadow: 0 1px 1px #FFFFFF;
+    width: 340px;
+
+}
+.container{
+	opacity: 0.7;
+	 /* background-color:red; */
+	/* background-color:red;
+	background-color:rgba(0,0,0,0.5); */
+}
+
+
+
+#footer {
+	background: #274F75 url(/Picture/bg-footer1.gif) repeat-x;
+	min-height: 113px;
+	width: 100%;
+}
+
+#footer div {
+	font-size: 12px;
+	margin: 0 auto;
+    padding-top: 37px;
+	position: relative;
+    width: 960px;
+}
+
+#footer div div#connect {
+	float: left;
+	padding: 0;
+	width: 250px;
+}
+
+#footer div div#connect a {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+#footer div div.section {
+	float: right;
+	padding: 0;
+	width: 700px;
+}
+
+#footer div div.section ul {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+	position: absolute;
+    right: 0;
+	top: 0;
+}
+
+#footer div div.section ul li {
+	border-left: 1px solid #6886a0;
+	float: left;
+	padding: 0 5px;
+}
+
+#footer div div.section ul li.last {
+	border-right: 0;
+}
+
+#footer div div.section ul li:first-child {
+	border: none;
+}
+
+#footer div div.section ul li a {
+	color: #6886A0;
+    display: block;
+	height: 12px;
+    line-height: 10px;
+    text-decoration: none;
+}
+
+#footer div div.section ul li a:hover {
+	color: #fff;
+}
+
+#footer div div.section p {
+	color: #6886A0;
+    margin: 0;
+    padding: 20px 3px 0;
+    text-align: right;
+}
+
+.name{
+	font-size:30px;
+	text-align:center;
+	width:120px;
+	height:50px;
+	font-family:"黑体";
+
+}
+
+
+.head1{
+	display:inline-block;
+	height:200px;
+	width:1550px;
+	text-align:center;
+	font-size:72px;
+	font-weight:900;
+	line-height:180px;
+	background-color:#CFC;
+}
+
+
+#ss1{
+
+	display:inline-block;
+
+	position:absolute;
+	top:140px;
+	left:400px;
+	background-color:#FFF;
+
+	margin-top:80px;
+	text-align:center;
+	font-size:24px;
+	border:5px solid #000
+}
+
+#ss2{
+
+	display:inline-block;
+
+	position:absolute;
+	top:240px;
+	left:400px;
+	background-color:#FFF;
+
+	margin-top:80px;
+	text-align:center;
+	font-size:24px;
+	border:5px solid #000
+}
+
+.turning_bar{
+	float:left;
+	width:370px;
+	height:auto;
+	text-align:center;
+	font-family:"黑体";
+	font-size:36px;
+	background-color:#9F9;
+}
+
+.butt{
+	size:30;
+	margin-left:30px;
+	margin-bottom:50px;
+	font-size:36px;
+}
+
+.container {
+	width: 1920px;
+	background-color: #FFFFFF;
+	margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐 */
+}
+
+.sidebar1 {
+	float: right;
+	width: 300px;
+	background-color: #EADCAE;
+	padding-bottom: 10px;
+	font-size:36px;
+}
+
+p1	{
+	margin-top: 5px;
+	padding-right:15px;
+	padding-left:15px;
+	color: #C03;
+}
+
+p2 {
+	margin-left:800px;
+	text-align:center;
+	font-size:36px;
+	background-color:#0FF;
+}
+
+#pic{
+	display:inline-block;
+	position:absolute;
+	top:320px;
+	left:-150px;
+}
+
+
+.ticket{
+	margin-left:400px;
+	margin-top:70px;
+	width:400px;
+	height:600px;
+	border:5px solid #963;
+	background-color:#FFF;
+}
+
+.message{
+	margin-left:40px;
+	font-size:24px;
+
+}
+.message1{
+	margin-left:40px;
+	font-size:24px;
+	color:#936;
+
+}

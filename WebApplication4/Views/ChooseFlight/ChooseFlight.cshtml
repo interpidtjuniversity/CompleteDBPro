@@ -1,0 +1,116 @@
+﻿@using WebApplication4.Models;
+@model List<Flight>
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <style type="text/css">
+        #Flight_Chart {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            width: 80%;
+            border-collapse: collapse;
+        }
+
+            #Flight_Chart td, #Users th {
+                font-size: 1em;
+                border: 1px solid #98bf21;
+                padding: 3px 7px 2px 7px;
+            }
+
+            #Flight_Chart th {
+                font-size: 1.1em;
+                text-align: left;
+                padding-top: 5px;
+                padding-bottom: 4px;
+                background-color: #A7C942;
+                color: #ffffff;
+            }
+
+            #Flight_Chart tr.alt td {
+                color: #000000;
+                background-color: #EAF2D3;
+            }
+    </style>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>飞机列表</title>
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript">
+        /*    ajax的功能与版本不相符合所以暂且不适用
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/ChooseFlight/ShowFlight",
+                    type: "post",
+                    async: true,
+                    dataType: "json",
+                    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                    success: function (data) {
+                        showData(data);
+                    },
+                    error: function (msg) {
+                        alert("ajax连接异常:" + msg);
+                    }
+                });
+            });
+            function showData(data) {
+                var str = "";
+                for (var i = 0; i < data.length; i++) {
+                    str = "<tr><td>" + data[i].Flight_ID + "</td><td>" + data[i].Max_Capacity + "</td><td>" + data[i].Price + "</td></tr>";
+                    $("#Flight_Chart").append(str);
+                }
+            }
+            */
+    </script>
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="section">
+                <div><a><img src="~/Picture/logo.jpg" alt="Logo" /></a></div>
+                <p style="float:right;"><a href="/Login/Login" style="color:#0F0;font-size:24px;">注销</a></p>
+                    <span>欢迎使用机场管理系统 <br /><br />你好，303</span>
+            </div>
+            <ul>
+                <li><a href="/Login/ReturnToPersonMain">主页</a></li>
+                <li class="current"><a href="/ChooseFlight/ChooseFlight">登机牌业务</a></li>
+                <li><a href="/ChooseFlight/ShowFlightsState">机场状态</a></li>
+                <li><a href="/Luggage/ShowLuggages">行李托运</a></li>
+                <li><a href="/BoardPass/ShowFlightsState">登机管理</a></li>
+            </ul>
+        </div>
+        <table id="Flight_Chart" style="margin:5px auto 2px auto;">
+            <tr>
+                <th>航班ID</th>
+                <th>飞机ID</th>
+                <th>最大容量</th>
+                <th>预订数目</th>
+                <th>已办理人数</th>
+                <th>价格</th>
+                <th>最大行李重量</th>
+                <th>登机人数</th>
+            </tr>
+            @{
+
+                foreach (Flight flight in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.ActionLink(flight.F_ID, "GetFlightInfo", new { id = flight.F_ID, capacity = flight.Capacity })
+                        </td>
+                        <td>@Html.DisplayFor(m => flight.P_ID)</td>
+                        <td>@Html.DisplayFor(m => flight.Capacity)</td>
+                        <td>@Html.DisplayFor(m => flight.Reserve)</td>
+                        <td>@Html.DisplayFor(m => flight.Checked)</td>
+                        <td>@Html.DisplayFor(m => flight.Board)</td>
+                        <td>@Html.DisplayFor(m => flight.Value)</td>
+                        <td>@Html.DisplayFor(m => flight.Luggage)</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</body>
+</html>
+

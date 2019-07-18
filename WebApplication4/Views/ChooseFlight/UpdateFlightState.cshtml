@@ -1,0 +1,196 @@
+﻿<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <style type="text/css">
+
+        /*分别定义HTML中和标记之的距离样式*/
+
+        html, body, h1, form, fieldset, legend, ol, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*定义<body>标记样式*/
+
+        body {
+            background: #ffffff;
+            color: #111111;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            
+        }
+
+        /*定义付费内容的样式*/
+
+        form#payment {
+            background: #9cbc2c;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            padding: 20px;
+            width: 400px;
+            margin: 20px auto 20px auto;
+
+        }
+
+            form#payment fieldset {
+                border: none;
+                margin-bottom: 10px;
+            }
+
+                form#payment fieldset:last-of-type {
+                    margin-bottom: 0;
+                }
+
+            form#payment legend {
+                color: #384313;
+                font-size: 16px;
+                font-weight: bold;
+                padding-bottom: 10px;
+                text-shadow: 0 1px 1px #c0d576;
+            }
+
+            form#payment > fieldset > legend:before {
+                content: "Step " counter(fieldsets) ": ";
+                counter-increment: fieldsets;
+            }
+
+            form#payment fieldset fieldset legend {
+                color: #111111;
+                font-size: 13px;
+                font-weight: normal;
+                padding-bottom: 0;
+            }
+
+            form#payment ol li {
+                background: #b9cf6a;
+                background: rgba(255, 255, 255, .3);
+                border-color: #e3ebc3;
+                border-color: rgba(255, 255, 255, .6);
+                border-style: solid;
+                border-width: 2px;
+                -webkit-border-radius: 5px;
+                line-height: 30px;
+                list-style: none;
+                padding: 5px 10px;
+                margin-bottom: 2px;
+            }
+
+            form#payment ol ol li {
+                background: none;
+                border: none;
+                float: left;
+            }
+
+            form#payment label {
+                float: left;
+                font-size: 13px;
+                width: 110px;
+            }
+
+            form#payment fieldset fieldset label {
+                background: none no-repeat left 50%;
+                line-height: 20px;
+                padding: 0 0 0 30px;
+                width: auto;
+            }
+
+                form#payment fieldset fieldset label:hover {
+                    cursor: pointer;
+                }
+
+            form#payment input:not([type=radio]), form#payment textarea {
+                background: #ffffff;
+                border: #FC3 solid 1px;
+                -webkit-border-radius: 3px;
+                font: italic 13px Georgia, "Times New Roman", Times, serif;
+                outline: none;
+                padding: 5px;
+                width: 200px;
+            }
+
+                form#payment input:not([type=submit]):focus, form#payment textarea:focus {
+                    background: #eaeaea;
+                    border: #F00 solid 1px;
+                }
+
+            form#payment input[type=radio] {
+                float: left;
+                margin-right: 5px;
+            }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="section">
+                <div><a href="index.html"><img src="~/Picture/logo.jpg" alt="Logo" /></a></div>
+                <p style="float:right;"><a href="/Login/Login" style="color:#0F0;font-size:24px;">注销</a></p>
+                <span>欢迎使用机场管理系统 <br /><br />你好，303</span>
+
+            </div>
+            <ul>
+                <li><a href="/Login/ReturnToPersonMain">主页</a></li>
+                <li><a href="/ChooseFlight/ChooseFlight">登机牌业务</a></li>
+                <li class="current"><a href="/ChooseFlight/ShowFlightsState">机场状态</a></li>
+                <li><a href="/Luggage/ShowLuggages">行李托运</a></li>
+                <li><a href="/BoardPass/ShowFlightsState">登机管理</a></li>
+
+
+            </ul>
+        </div>
+        <form id="payment" action="/ChooseFlight/ReturnToShowFlightState">
+
+            <fieldset>
+                <legend>修改航班信息</legend>
+                <ol>
+                    <li>
+                        <label for="a">航班号：</label>
+                        <input id="a" name="a" type="text" value="@(Model[0])" required autofocus>
+                    </li>
+                    <li>
+                        <label for="b">出发：</label>
+                        <input id="b" name="b" type="text" value="@(Model[1])" required>
+                    </li>
+                    <li>
+                        <label for="c">到达：</label>
+                        <input id="c" name="c" type="text" value="@(Model[2])" required>
+                    </li>
+                    <li>
+                        <label for="d">预计起飞时间：</label>
+                        <input id="d" name="d" type="text" value="@(Model[3])" required>
+                    </li>
+                    <li>
+                        <label for="e">预计到达时间：</label>
+                        <input id="e" name="e" type="text" value="@(Model[4])" required>
+                    </li>
+                    <li>
+                        <label for="f">航班状态：</label>
+                        <input id="f" name="f" type="text" value="@(Model[5])" required>
+                    </li>
+                </ol>
+            </fieldset>
+            <div id="login">
+                <button type="submit">确认修改</button>
+            </div>
+        </form>
+        <div id="footer">
+            <div>
+                <div id="connect">
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-facebook.gif" alt="Facebook" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-twitter.gif" alt="Twitter" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-youtube.gif" alt="Youtube" /></a>
+                </div>
+                <div class="section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="trainingcourses.html">Training Courses</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li class="last"><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                    <p>&copy; Copyright 0000. Company Name. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,529 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C64F9E87-699A-4967-8201-8F67983A2D16}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication4</RootNamespace>
+    <AssemblyName>WebApplication4</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\Dapper\X86\1.6.0.0\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\dll\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Microsoft.Practices.Unity.Configuration\X86\2.0.414.0\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="SqlSugar, Version=5.0.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlSugar.5.0.0.8\lib\SqlSugar.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap1.css" />
+    <Content Include="Content\card.css" />
+    <Content Include="Content\Cubestyle.css" />
+    <Content Include="Content\foxholder-styles.css" />
+    <Content Include="Content\frame.css" />
+    <Content Include="Content\help-styles.css" />
+    <Content Include="Content\indexstyle.css" />
+    <Content Include="Content\Login.css" />
+    <Content Include="Content\new.css" />
+    <Content Include="Content\prism.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\accordion.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\accordion.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\accordion.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\accordion.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\ad.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\ad.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\api.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\api.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\breadcrumb.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\breadcrumb.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\button.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\button.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\card.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\card.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\checkbox.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\checkbox.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\checkbox.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\checkbox.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\colorize.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\colorize.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\comment.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\comment.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\container.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\container.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\dimmer.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\dimmer.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\dimmer.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\dimmer.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\divider.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\divider.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\dropdown.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\dropdown.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\dropdown.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\dropdown.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\embed.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\embed.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\embed.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\embed.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\feed.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\feed.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\flag.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\flag.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\form.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\form.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\form.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\form.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\grid.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\grid.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\header.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\header.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\icon.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\icon.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\image.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\image.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\input.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\input.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\item.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\item.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\label.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\label.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\list.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\list.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\loader.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\loader.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\menu.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\menu.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\message.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\message.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\modal.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\modal.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\modal.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\modal.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\nag.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\nag.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\nag.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\nag.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\placeholder.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\placeholder.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\popup.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\popup.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\popup.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\popup.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\progress.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\progress.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\progress.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\progress.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\rail.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\rail.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\rating.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\rating.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\rating.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\rating.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\reset.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\reset.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\reveal.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\reveal.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\search.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\search.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\search.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\search.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\segment.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\segment.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\shape.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\shape.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\shape.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\shape.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\sidebar.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\sidebar.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\sidebar.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\sidebar.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\site.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\site.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\site.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\site.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\state.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\state.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\statistic.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\statistic.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\step.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\step.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\sticky.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\sticky.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\sticky.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\sticky.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\tab.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\tab.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\tab.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\tab.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\table.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\table.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\transition.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\transition.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\transition.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\transition.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\video.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\video.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\video.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\video.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\visibility.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\visibility.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\visit.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\components\visit.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\package.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\semantic.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\semantic.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\semantic.min.css" />
+    <Content Include="Content\Semantic-UI-CSS-master\semantic.min.js" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\brand-icons.svg" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\icons.svg" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\outline-icons.svg" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\images\flags.png" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\style1.css" />
+    <Content Include="Content\style2.css" />
+    <Content Include="Content\style3.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Picture\0.jpg" />
+    <Content Include="Picture\1.jpg" />
+    <Content Include="Picture\2.jpg" />
+    <Content Include="Picture\a.png" />
+    <Content Include="Picture\b.png" />
+    <Content Include="Picture\background.gif" />
+    <Content Include="Picture\background.jpg" />
+    <Content Include="Picture\bg-content.gif" />
+    <Content Include="Picture\bg-footer.gif" />
+    <Content Include="Picture\bg-footer1.gif" />
+    <Content Include="Picture\bg-header.gif" />
+    <Content Include="Picture\bg-header2.jpg" />
+    <Content Include="Picture\bg-home.gif" />
+    <Content Include="Picture\bg-menu.gif" />
+    <Content Include="Picture\c.png" />
+    <Content Include="Picture\captcha.jpg" />
+    <Content Include="Picture\copy_rignt_24.png" />
+    <Content Include="Picture\header1.jpg" />
+    <Content Include="Picture\icon-facebook.gif" />
+    <Content Include="Picture\icon-twitter.gif" />
+    <Content Include="Picture\icon-youtube.gif" />
+    <Content Include="Picture\liuchengtu.jpg" />
+    <Content Include="Picture\logo.jpg" />
+    <Content Include="Picture\lunbo1.jpg" />
+    <Content Include="Picture\lunbo2.jpg" />
+    <Content Include="Picture\lunbo3.jpg" />
+    <Content Include="Picture\model1.jpg" />
+    <Content Include="Picture\model2.jpg" />
+    <Content Include="Picture\model3.jpg" />
+    <Content Include="Picture\plane.jpg" />
+    <Content Include="Picture\plane2.jpg" />
+    <Content Include="Picture\客机.gif" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ConnectionString.json" />
+    <Content Include="Scripts\foxholder.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Content\Semantic-UI-CSS-master\.versions" />
+    <Content Include="Content\Semantic-UI-CSS-master\LICENSE" />
+    <Content Include="Content\Semantic-UI-CSS-master\package.json" />
+    <Content Include="Content\Semantic-UI-CSS-master\README.md" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\brand-icons.eot" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\brand-icons.ttf" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\brand-icons.woff" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\brand-icons.woff2" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\icons.eot" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\icons.otf" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\icons.ttf" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\icons.woff" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\icons.woff2" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\outline-icons.eot" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\outline-icons.ttf" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\outline-icons.woff" />
+    <Content Include="Content\Semantic-UI-CSS-master\themes\default\assets\fonts\outline-icons.woff2" />
+    <Content Include="Scripts\prism.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="WindowsFormsApplication4.BusinessCore\WindowsFormsApplication4.BusinessCore.csproj" />
+    <Content Include="WindowsFormsApplication4.Enties\WindowsFormsApplication4.Enties.csproj" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-3.4.0.min.js" />
+    <Content Include="Scripts\jquery.SuperSlide.js" />
+    <Content Include="Scripts\jquery1.42.min.js" />
+    <Content Include="Scripts\jQuery1.7.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Validform_v5.3.2.js" />
+    <Content Include="Scripts\Validform_v5.3.2_min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\ChooseFlight\UpdateFlightState.cshtml" />
+    <Content Include="Views\Luggage\ShowLuggages.cshtml" />
+    <Content Include="Views\BoardPass\CheckBoardingStates.cshtml" />
+    <Content Include="Views\Shared\_Layoutsecond.cshtml" />
+    <Content Include="Views\BoardPass\CustomerBoardingStates.cshtml" />
+    <Content Include="Views\Airlines\AddPlane.cshtml" />
+    <Content Include="Views\Airlines\Airlines.cshtml" />
+    <Content Include="Views\Airlines\ChangeFlight.cshtml" />
+    <Content Include="Views\Airlines\FlightInformation.cshtml" />
+    <Content Include="Views\Airlines\query.cshtml" />
+    <None Include="WindowsFormsApplication4.BusinessCore\packages.config" />
+    <None Include="WindowsFormsApplication4.Enties\packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Actions.cs" />
+    <Compile Include="Controllers\AirlinesController.cs" />
+    <Compile Include="Controllers\BoardPassController.cs" />
+    <Compile Include="Controllers\ChooseFlightController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LuggageController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\ConnectionFactory.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerBoardingState.cs" />
+    <Compile Include="Models\DataBaseAccess.cs" />
+    <Compile Include="Models\DBAttribute.cs" />
+    <Compile Include="Models\DBConnectionPool.cs" />
+    <Compile Include="Models\Flight.cs" />
+    <Compile Include="Models\FlightSelectReturn.cs" />
+    <Compile Include="Models\FlightStateReturn.cs" />
+    <Compile Include="Models\Fstate.cs" />
+    <Compile Include="Models\IConnectionFactory.cs" />
+    <Compile Include="Models\Luggage.cs" />
+    <Compile Include="Models\ParseJson.cs" />
+    <Compile Include="Models\RegisterService.cs" />
+    <Compile Include="Models\SearchFlight.cs" />
+    <Compile Include="Models\Seat.cs" />
+    <Compile Include="Models\SelectReturn.cs" />
+    <Compile Include="Models\TFlightTime.cs" />
+    <Compile Include="Models\TypeConvert.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\LoginService.cs" />
+    <Compile Include="Models\OracleHelper.cs" />
+    <Compile Include="Models\Workers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\CUSTOMERManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\FCREWManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\FLIGHTIMEManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\FLIGHTManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\FSTATEManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\GROUNDManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\LUGGAGEManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\PLANEManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\SEATManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\TERMINALManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\TIMEManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\USERSManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\BaseCore\WORKERSManager.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\class1.cs" />
+    <Compile Include="WindowsFormsApplication4.BusinessCore\DbCore\DbContext.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\class1.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\CUSTOMER.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\FCREW.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\FLIGHT.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\FLIGHTIME.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\FSTATE.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\GROUND.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\LUGGAGE.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\PLANE.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\SEAT.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\TERMINAL.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\TIME.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\USERS.cs" />
+    <Compile Include="WindowsFormsApplication4.Enties\DbModels\WORKERS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\ChooseFlight\ChooseFlight.cshtml" />
+    <Content Include="Views\ChooseFlight\Flight.cshtml" />
+    <Content Include="Views\Home\AddUser.cshtml" />
+    <Content Include="Views\Login\GroundWorkerHome.cshtml" />
+    <Content Include="Views\ChooseFlight\ShowBoardingPass.cshtml" />
+    <Content Include="Views\ChooseFlight\FlightState.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="SqlSugarClass\" />
+    <Folder Include="WindowsFormsApplication4.BusinessCore\bin\" />
+    <Folder Include="WindowsFormsApplication4.Enties\bin\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54034</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54034/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

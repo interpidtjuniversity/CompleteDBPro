@@ -1,0 +1,179 @@
+﻿@using WebApplication4.Models;
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>航空公司</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/help-styles.css" />
+    <link rel="stylesheet" href="~/Content/prism.css" />
+    <link rel="stylesheet" href="~/Content/foxholder-styles.css" />
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery1.42.min.js"></script>
+    <script src="~/Scripts/jQuery1.7.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="/Scripts/jquery-1.10.2.intellisense.js"></script>
+
+    <script src="/Scripts/prism.js"></script>
+
+
+    <script src="/Scripts/script.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-66794691-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script>
+        function transformValue() {
+            alert("success!");
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="~/Content/frame.css" />
+
+</head>
+
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="section">
+                <div id="logo"><img src="~/Picture/logo.jpg" alt="Logo" /></div>
+                <p>欢迎使用机场管理系统</p>
+                <!-- <p style="float:right;"><a href="#" style="color:#0F0;font-size:24px;">注销</a></p> -->
+            </div>
+            <div id="user">
+                <p>
+                    你好,&nbsp;<span id="name">东方航空公司</span>
+                </p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/Login/Login" style="color:#a6beea;font-size:15px;">注销</a>
+                </p>
+            </div>
+            <ul id="tcontent">
+                <li><a href="/Airlines/Airlines">新建航班</a></li>
+                <li class="current"><a href="#">修改航班</a></li>
+                <li><a href="/Airlines/AddPlane">添加飞机</a></li>
+                <li><a href="/Airlines/query">查询航班</a></li>
+                <li><a href="/Airlines/FlightInformation">实时航班信息</a></li>
+            </ul>
+        </div>
+        <div class="container" style="width: 830px;">
+
+            <!-- **********************demo2 **********************************-->
+            <div id="change_flight" style="height:1000px;">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                        <div class="form-container-2">
+                            <h3 class="text-center">修改航班</h3>
+                            <p>&#32;</p>
+                            <div class="search bar1">
+                                <form method="post" action="/Airlines/ReceiveMsg2_1" name="form">
+                                    <input name="fid" type="text" placeholder="请输入航班号" id="fidid">
+                                    <button id="search_button" style="border:none;" type="submit"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @{
+                    if (Model != null)
+                    {
+                        if (Model[0] == "-1")
+                        {
+                            @*<p style="color :red;font-size:30px;margin-left:43%;">
+                                No result!
+                            </p>*@
+                        }
+                        else
+                        {
+                            <div id="serch_result" method="post" action="/Airlines/ReceiveMsg2_2" name="form">
+
+
+                                
+
+
+                                <form class="basic-grey">
+                                    <p>出 发 地：</p>
+                                    <input name="r1" type="text" value="@(Model[1])" />
+                                    <br />
+                                    <p>出 发 时 间:   </p>
+                                    <input name="r2" type="datetime" value="@(Model[2])" />
+                                    <br />
+                                    <p>出 发 航 站 楼：</p>
+                                    <input name="r3" type="text" value="@(Model[3])" />
+                                    <br />
+                                    <p>目 的 地:</p>
+                                    <input name="r4" type="text" value="@(Model[4])" />
+                                    <br />
+                                    <p>到 达 时 间:</p>
+                                    <input name="r5" type="datetime" value="@(Model[5])" />
+                                    <br />
+                                    <p>到 达 航 站 楼：</p>
+                                    <input name="r6" type="text" value="@(Model[6])" />
+                                    <br />
+                                    @*<p>票 价：</p>
+                                        <input name="r7" type="text" placeholder="票价" />
+                                        <br />*@
+                                    <button id="submit" type="submit" onclick="transformValue()">Submit</button>
+                                </form>
+
+                            </div>
+                        }
+
+                    }
+                }
+
+
+            </div>
+
+        </div>
+        <div id="footer">
+            <div>
+                <div id="connect">
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="/Picture/icon-facebook.gif" alt="Facebook" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="/Picture/icon-twitter.gif" alt="Twitter" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-youtube.gif" alt="Youtube" /></a>
+                </div>
+                <div class="section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="trainingcourses.html">Training Courses</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li class="last"><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                    <p>&copy; Copyright 0000. Company Name. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/foxholder.js"></script>
+    <div style="display:none">
+        <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
+    </div>
+
+
+</body>
+
+</html>
+

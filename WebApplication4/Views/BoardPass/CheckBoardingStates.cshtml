@@ -1,0 +1,233 @@
+﻿@using WebApplication4.Models;
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>航班情况</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/indexstyle.css" />
+    <style type="text/css">
+        <!--
+        body, table {
+            font-size: 12px;
+        }
+
+        table {
+            table-layout: fixed;
+            empty-cells: show;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        td {
+            height: 30px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            background: #FFF;
+            border: 1px solid #9DB3C5;
+            padding: 1px;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+            .title h1 {
+                font-size: 30px;
+                line-height: 50px;
+                text-align: center;
+                background: #2F589C url(th_bg2.gif);
+                background-repeat: repeat-x repeat-y;
+                background-position: 0 0;
+                color: #FFF;
+            }
+
+            .title th, .title td {
+                border: 1px solid #CAD9EA;
+                padding: 5px;
+            }
+
+
+        /*这个是借鉴一个论坛的样式*/
+        table.t1 {
+            border: 1px solid #cad9ea;
+            color: #666;
+        }
+
+            table.t1 th {
+                background-image: url(th_bg1.gif);
+                background-repeat: repeat-x;
+                height: 30px;
+            }
+
+            table.t1 td, table.t1 th {
+                border: 1px solid #cad9ea;
+                padding: 0 1em 0;
+            }
+
+            table.t1 tr.a1 {
+                background-color: #f5fafe;
+            }
+
+
+
+
+        -->
+    </style>
+
+    <!--[if IE 6]>
+        <link rel="stylesheet" type="text/css" href="ie6.css" />
+    <![endif]-->
+
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript">
+
+        function Update() {
+            window.location.href = "UpdateFlightState";
+        };
+
+        var pickresult = -1;
+        $(document).on('click', '#buttonu', function () {
+
+            pickresult = $(this).parents("tr").index();
+
+
+            var flightid = $(this).parents("tr").find("td").eq(0).text();
+
+            document.form.a.value = flightid;
+
+            document.form.submit();                //只提交航班号
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="section">
+                <div>
+                    <a href="~/Views/Index/index.cshtml"><img src="~/Picture/logo.jpg" alt="LOGO" /></a>
+                </div>
+                <p style="float:right;"><a href="/Login/Login" style="color:#0F0;font-size:24px;">注销</a></p>
+                <span>欢迎使用机场管理系统 <br /><br />你好，303</span>
+            </div>
+            <ul>
+                <li><a href="/Login/ReturnToPersonMain">主页</a></li>
+                <li><a href="/ChooseFlight/ChooseFlight">登机牌业务</a></li>
+                <li><a href="/ChooseFlight/ShowFlightsState">机场状态</a></li>
+                <li><a href="/Luggage/ShowLuggages">行李托运</a></li>
+                <li class="current"><a href="/BoardPass/ShowFlightsState">登机管理</a></li>
+
+            </ul>
+        </div>
+
+
+        <div class="title">
+            <h1>航班状态表</h1>
+        </div>
+
+        <table width="90%" id="mytab" border="1" class="t1">
+            <thead>
+            <th width="15%">航班号</th>
+            <th width="15%">出发地</th>
+            <th width="15%">到达地</th>
+            <th width="15%">预计出发</th>
+            <th width="15%">预计达到</th>
+            <th width="18%">当前状态</th>
+            <th width="10%">乘客状态</th>
+            </thead>
+            @{
+                int flag = 0;
+                foreach (FlightStateReturn fsr in Model)
+                {
+                    string a = fsr.tf.t_airport + "-" + fsr.tf.t_terminal;
+                    string b = fsr.tf.l_airport + "-" + fsr.tf.l_termnal;
+                    if (flag % 2 == 0)
+                    {
+                        <tr class="a1">
+                            <td>@Html.DisplayFor(m => fsr.tf.f_id)</td>
+                            <td>@Html.DisplayFor(m => a)</td>
+                            @*<td>@Html.DisplayFor(m => flight_time.F_tt)</td>*@
+                            <td>@Html.DisplayFor(m => b)</td>
+                            <td>@Html.DisplayFor(m => fsr.tf.ex_takeoff_time)</td>
+                            <td>@Html.DisplayFor(m => fsr.tf.ex_land_time)</td>
+                            <td>@Html.DisplayFor(m => fsr.State)</td>
+                            @*<td>@Html.DisplayFor(m => flight_time.F_rtt)</td>
+                            <td>@Html.DisplayFor(m => flight_time.F_rlt)</td>
+                            <td>@Html.DisplayFor(m => flight_time.F_la)</td>
+                            <td>@Html.DisplayFor(m => flight_time.F_lt)</td>*@
+                            <td>
+                                <input type="button" id="buttonu" value="查看">
+                            </td>
+                        </tr>
+                        flag++;
+                    }
+                    else
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(m => fsr.tf.f_id)</td>
+                            <td>@Html.DisplayFor(m => a)</td>
+                            @*<td>@Html.DisplayFor(m => flight_time.F_tt)</td>*@
+                            <td>@Html.DisplayFor(m => b)</td>
+                            <td>@Html.DisplayFor(m => fsr.tf.ex_takeoff_time)</td>
+                            <td>@Html.DisplayFor(m => fsr.tf.ex_land_time)</td>
+                            <td>@Html.DisplayFor(m => fsr.State)</td>
+                            @*<td>@Html.DisplayFor(m => flight_time.F_rtt)</td>
+                            <td>@Html.DisplayFor(m => flight_time.F_rlt)</td>
+                            <td>@Html.DisplayFor(m => flight_time.F_la)</td>
+                            <td>@Html.DisplayFor(m => flight_time.F_lt)</td>*@
+                            <td>
+                                <input type="button" id="buttonu" value="查看">
+                            </td>
+                        </tr>
+                        flag++;
+                    }
+                }
+            }
+        </table>
+
+        <form method="post" action="/BoardPass/ShowCustomerBoardingStates" name="form" style="margin:0 auto;width:500px">
+            <input type="hidden" name="a" id="aid" value="">
+        </form>
+
+
+        <br>
+        <div id="footer" style="display:inline-block">
+            <div>
+                <div id="connect">
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-facebook.gif" alt="Facebook" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-twitter.gif" alt="Twitter" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="~/Picture/icon-youtube.gif" alt="Youtube" /></a>
+                </div>
+                <div class="section">
+                    <ul>
+                        <li><a href="~/Views/Index/index.cshtml">Home</a></li>
+                        <li><a href="~/Views/ViewFlight/FlightInfo.cshtml">About</a></li>
+                        <li><a href="~/Views/Airport/AirportInfo.cshtml">Admissions</a></li>
+                        <li><a href="~/Views/Passenger/PassengerInfo.cshtml">Training Courses</a></li>
+                        <li><a href="~/Views/Index/index.cshtml">Career</a></li>
+                        <li class="last"><a href="~/Views/ViewFlight/FlightInfo.cshtml">Contact Us</a></li>
+                    </ul>
+                    <p>&copy; Copyright 0000. Company Name. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display:none">
+        <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</body>
+</html>
+

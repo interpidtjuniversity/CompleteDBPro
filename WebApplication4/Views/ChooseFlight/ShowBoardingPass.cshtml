@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "ShowBoardingPass";
+}
+<!DOCTYPE html>
+<!-- Template by freewebsitetemplates.com -->
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>登机牌</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <!--[if IE 6]>
+        <link rel="stylesheet" type="text/css" href="ie6.css" />
+    <![endif]-->
+</head>
+
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="section">
+                <div><a href=""><img src="~/Picture/logo.jpg" alt="Logo" /></a></div>
+                <p style="float:right;"><a href="/Login/Login" style="color:#0F0;font-size:24px;">注销</a></p>
+                <span>欢迎使用机场管理系统 <br /><br />你好，303</span>
+            </div>
+            <ul>
+                <li><a href="/Login/ReturnToPersonMain">主页</a></li>
+                <li class="current"><a href="/ChooseFlight/ChooseFlight">登机牌业务</a></li>
+                <li><a href="/ChooseFlight/ShowFlightsState">机场状态</a></li>
+                <li><a href="/Luggage/ShowLuggages">行李托运</a></li>
+                <li><a href="/BoardPass/ShowFlightsState">登机管理</a></li>
+            </ul>
+        </div>
+
+        <div id="container" style="background-color:red">
+            <div>
+                <div class="first">
+                    <div class="sidebar1">
+                        <form class="butt" style="display:inline-block;width:80px;height:50px; src:url(about.html);">
+                            <input type="button" value="返回" name="cancel" align="middle" onClick="javascript:window.location.href='/ChooseFlight/ChooseFlight'" style="width:80px;height:50px;" />
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ticket">
+            @{
+                string name = Model[0];
+                string gender = Model[1];
+                string id = Model[2];
+                string flightid = Model[3];
+                string airport_terminal = Model[4];
+                string takeofftime = Model[5];
+                string seatid = Model[6];
+                <p style="text-align:center;font-size:36px;color: #F63;">登机牌</p>
+                <p class="message">姓名:@Html.DisplayFor(m => name)</p>
+                <p class="message">姓别:@Html.DisplayFor(m => gender)</p>
+                <p class="message">ID:@Html.DisplayFor(m => id)</p>
+                <p class="message">航班号:@Html.DisplayFor(m => flightid)</p>
+                <p class="message">出发地点:@Html.DisplayFor(m => airport_terminal)</p>
+                <p class="message">出发时间:@Html.DisplayFor(m => takeofftime)</p>
+                <p class="message">座位号:@Html.DisplayFor(m => seatid)</p>
+                <br><br>
+                <p class="message1">祝您旅途愉快！</p>
+            }
+        </div>
+
+
+        <div id="footer" style="display:inline-block">
+            <div>
+                <div id="connect">
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="images/icon-facebook.gif" alt="Facebook" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="images/icon-twitter.gif" alt="Twitter" /></a>
+                    <a href="http://sc.chinaz.com/moban" target="_blank"><img src="images/icon-youtube.gif" alt="Youtube" /></a>
+                </div>
+                <div class="section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="trainingcourses.html">Training Courses</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li class="last"><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                    <p>&copy; Copyright 0000. Company Name. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display:none">
+    <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
+

@@ -1,0 +1,164 @@
+﻿
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <style type="text/css">
+        /*表格*/
+        #Users {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            #Users td, #Users th {
+                font-size: 1em;
+                border: 1px solid #98bf21;
+                padding: 3px 7px 2px 7px;
+            }
+
+            #Users th {
+                font-size: 1.1em;
+                text-align: left;
+                padding-top: 5px;
+                padding-bottom: 4px;
+                background-color: #A7C942;
+                color: #ffffff;
+            }
+
+            #Users tr.alt td {
+                color: #000000;
+                background-color: #EAF2D3;
+            }
+
+            /*搜索框*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 70px;
+            width: 800px;
+            margin: 100px auto 0 auto;
+        }
+
+        .parent {
+            position: relative;
+        }
+
+        .search {
+            width: 300px;
+            height: 40px;
+            border-radius: 18px;
+            outline: none;
+            border: 1px solid #ccc;
+            padding-left: 20px;
+            position: absolute;
+        }
+
+        .btn {
+            height: 35px;
+            width: 35px;
+            position: absolute;
+            background: url("images/topbar.png") no-repeat -2px -99px;
+            top: 6px;
+            left: 285px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>欢迎来到管理联盟</title>
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "/Home/ShowUsers",
+                type: "post",
+                async: true,
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                success: function (data) {
+                    showData(data);
+                },
+                error: function (msg) {
+                    alert("ajax连接异常:" + msg);
+                }
+            });
+        });
+
+        function showData(data) {
+            var str = "";
+            for (var i = 0; i < data.length; i++) {
+                var buttond = "<input type='button' id='buttond' value='删除'/>";
+                var buttonu = "<input type='button' id= 'buttonu' alt='' value='修改'/>";
+                str = "<tr><td>" + data[i].sid + "</td><td>" + data[i].skey + "</td><td>" + data[i].rem_check + "</td>" + "<td>" + buttond + buttonu + "</td></tr>";
+                $("#Users").append(str);
+
+            }
+        };
+
+        var pickresult = -1;
+        $(document).on('click', '#buttond', function () {
+            var cm = confirm("确定删除该用户?");
+            if (cm == true) {
+                //在table中删除
+                pickresult = $(this).parents("tr").index();
+                var x = document.getElementById("Users");
+                x.deleteRow(pickresult);
+                //将数据传递到控制器然后在数据库中删除
+                var sid = $(this).parents("tr").find("td").eq(0).text();     //sid为people主码,直接传递主码
+                document.form.result.value = sid;
+                document.form.submit();
+            }
+            /*在update中可能会用到
+            var sid = $(this).parents("tr").find("td").eq(0).text();
+            var skey = $(this).parents("tr").find("td").eq(1).text();
+            var rem_check = $(this).parents("tr").find("td").eq(2).text();
+
+            var newsid = $("#newsid").val(newsid);
+            var newskey = $("newskey").val(newskey);
+            var newrem_check = $("newrem_check").val(newrem_check);
+            */
+        });
+
+        function AddUser() {
+            window.location.href = "AddUserPage";
+           // window.open("AddUserPage");
+        }
+    </script>
+</head>
+<body>
+    <div style="margin-left:20px;width:100%">
+        <div class="container">
+            <form action="/Home/Search" class="parent">
+                <input type="text" name="SearchContent" class="search" placeholder="搜索">
+                <input type="button" name="" id="" class="btn">
+            </form>
+        </div>
+        <span style="position:absolute;right:10px;height:20px" />
+        <button value="" style="height:20px" onclick="AddUser()">
+            添加新用户
+        </button>
+    </div>
+    <br/>
+    <table id="Users">
+        <tr>
+            <th>账号</th>
+            <th>密码</th>
+            <th>是否有最高权限</th>
+            <th>操作</th>
+        </tr>
+    </table>
+    <form method="post" action="/Home/DeleteUser" name="form" style="margin:0 auto;width:500px">
+        <input type="hidden" name="result" id="resultid" value="">
+    </form>
+</body>
+</html >
+
+
