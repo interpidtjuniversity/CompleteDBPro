@@ -1,0 +1,15 @@
+# CompleteDBPro
+2019年大二下学期数据库课程项目设计机场管理系统
+
+
+
+
+orcl1中是和数据库有关的数据信息(大家可以参考)
+本项目主要围绕机场工作人员建设,顾客从购票到办理登机牌再到登机要经过不同的关卡
+其中也考虑到了行李的托运
+航空公司也可以对机场内飞机进行管理
+
+其中WindowsFormsApplication4是一个AI,可以模拟数据的产生到销毁,在加上丰富的页面交互展示,数据可视化已经不是梦
+本项目数据访问层的接口采用了两套,第一套是手写的封装在DataBaseAccress.cs中该类通过对OracleHelper的调用实现数据访问
+第二套是运用了sqlsugar可以参考WindowsFormsApplication4.BusinessCore.cs和WindowsFormsApplication4.Enties.cs,以及控每一个制器
+最前端的db定义
